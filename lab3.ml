@@ -334,8 +334,8 @@ ensure the invariants are preserved for color and date, use them here
 as well.
 ......................................................................*)
 
-let new_child = 
-  fun _ -> failwith "new_child not implemented" ;;
+let new_child (n : string) (c : color) (d : date) : family = 
+  Single {name = n; favorite = valid_rgb c; birthdate = valid_date d} ;;
 
 (*......................................................................
 Exercise 12: Write a function that allows a person to marry in to a
