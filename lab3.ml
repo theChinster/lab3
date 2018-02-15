@@ -186,8 +186,8 @@ sure to round your result when converting back to an integer.
 ......................................................................*)
 
 let blend_channel (a : int) (b : int) : int = 
-  int_of_float (floor ((sqrt ((float a) ** 2. +. 
-                (float b) ** 2.) /. 2.) +. 0.5)) ;;
+  int_of_float (floor ((sqrt (((float a) ** 2. +. 
+                (float b) ** 2.) /. 2.)) +. 0.5)) ;;
 
 (*......................................................................
 Exercise 6: Now write a function, blend, that returns the result of
