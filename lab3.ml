@@ -267,7 +267,7 @@ exception Invalid_Date of string ;;
 
 let valid_date (d : date) : date = 
   if d.day > 0 then 
-    (if d.year > 0 then (match d.month with
+    (if d.year >= 0 then (match d.month with
     | 1 | 3 | 5 | 7 | 8 | 10 | 12 -> (if d.day <= 31 then d
     else raise (Invalid_Date "invalid day"))
     | 4 | 6 | 9 | 11 -> (if d.day <= 30 then d
